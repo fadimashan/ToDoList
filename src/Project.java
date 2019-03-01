@@ -1,11 +1,14 @@
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 
 
 public class  Project implements Serializable {
+    public static final long serialVersionUID = -5971538861194843412L;
 
-    public static String projectName;
-    public static ArrayList<Task> tasks;
+    public ArrayList<Task> tasks;
     public static int conter ;
 
 
@@ -13,19 +16,11 @@ public class  Project implements Serializable {
         tasks = new ArrayList<>();
     }
 
-    public void setProjectName(String projectName) {
-
-        this.projectName = projectName;
-    }
-
     public void addTask (Task task){
         tasks.add(task);
         conter = conter + 1;
     }
 
-//    public void editTask(){
-//        tasks.set(0, new Task("","","",""));
-//    }
 
     public void editTask(int index, String title, String desc, String date)
     {
@@ -38,16 +33,12 @@ public class  Project implements Serializable {
        // System.out.println("date");
         taskToEdit.setDate(date);
 
-//        System.out.println("edit the description: ");
-//        taskToEdit.setTitle(desc);
-
     }
     public void removeTask(int index){
         Task taskToRemove = tasks.remove( index - 1);
 
     }
-    //public ObjectOutputStream oSave;
-    //TODO
+
     public void showForEdit()
     {
         for (int i=0; i< tasks.size(); i++)
@@ -57,16 +48,14 @@ public class  Project implements Serializable {
         }
     }
 
-    public void showListTitle(){
-        int i=0;
-        for(Task task : tasks){
-            i++;
-            System.out.println("Task " + (i) + ":" + task.getTitle());
+    public ArrayList<Task> getTasks()
+    {
+        return this.tasks;
+    }
 
-        }
 
     }
 
-}
+
 
 

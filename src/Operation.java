@@ -1,15 +1,20 @@
 import java.io.*;
 import java.sql.SQLOutput;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.Scanner;
 import java.io.Serializable;
 
 public class Operation implements Serializable {
 
+    public static final long serialVersionUID = -5971538861194843412L;
+
     Scanner scanner = new Scanner(System.in);
     boolean x = false;
-    //ArrayList<Task> tasks = new ArrayList<>();
-    //Task task = new Task();
     Project taskList = new Project();
+    ArrayList<Task> tasks = new ArrayList<>();
 
 
     // to save the task in a file: data.bin
@@ -29,7 +34,6 @@ public class Operation implements Serializable {
     }
 
     // to read the Array list (tasks)
-
     public static Project readT() {
 
         Project Reader = new Project();
@@ -57,25 +61,53 @@ public class Operation implements Serializable {
             switch (scanner.nextInt()) {
 
                 case 1:
-                    //todo show the details of the tasks (project name and description)
+                    //here you can choose one of the option in the main class
                     if(Project.conter < 2){
                         System.out.println("You have " + Project.conter + " task");}
                     else {
                         System.out.println("You have " + Project.conter + " tasks");}
-                    //System.out.println("The tasks is: ");
-                    taskList.showForEdit();
-//                            Project Reader = readT();
-//                            System.out.println(" the title: " + Reader.tasks);
-                    System.out.println("To sort it due date press 6 or press 7 to sort it by the Project name" );
-                    //todo (sorting the tasks due date or by project name)
-                    System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
-                    x = true;
+                        System.out.println("1: for sorting by title,\n2: sorting by the project name, \n3: for sorting by date");
+                    readT();
+                    switch (scanner.nextInt()) {
+
+                        case 1:
+                            //sort by task's name
+                            Task t;
+                            for(int i = 0; i < tasks.size(); i++)
+                            {
+                                t = tasks.get(i);
+                                System.out.println("Task " + (tasks.indexOf(t)+1) +": "+ t.toString());
+                            }
+                           System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                            x= true;
+                           break;
+
+                        case 2:
+                            //Sort by the project name
+                            System.out.println("Sort by the project name");
+                            System.out.println("enter project title");
+                            String d = scanner.next();
+                            tasks.stream().filter(x->x.getProjectName().equals(d)).forEach(x-> {System.out.println(x.toString());
+                            });
+                            System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                            x= true;
+                            break;
+                        case 3:
+                            //Sort by the date
+                            System.out.println("Sort by the date");
+                            tasks.stream().sorted(Comparator.comparing(Task::getDate)).forEach(x-> {System.out.println(x.toString());
+                            });
+                            System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                            x= true;
+                            break;
+
+                    }
+
                     break;
 
                 case 2:
 
                     // to create a new task with scanner
-                    // enter a title
                     scanner.nextLine();
                     //TODO
                     System.out.print("Enter the title \n");
@@ -90,6 +122,7 @@ public class Operation implements Serializable {
                     System.out.println("Enter the date");
                     String date = scanner.nextLine();
 
+
                     // enter a project name
                     System.out.println("Enter the project name");
                     String project = scanner.nextLine();
@@ -99,14 +132,11 @@ public class Operation implements Serializable {
                     //TODO:
                     Task t = new Task(title, desc, date, project);
                     taskList.addTask(t);
+                    tasks.add(t);
 
                     //===============
-                    //taskList.addTask(task);
-                    //Task.createTask(task.title, task.Desc, task.Date, task.taskList);
-                    //System.out.println(task.title + task.Desc + task.taskList.projectName);
 
-                    //taskList.addTask(task);
-                    // saveT(taskList);
+                    saveT(taskList);
                     x = true;
                     System.out.println("Done!");
                     System.out.println("++++++++++++++++++++++++++++++++++++++++");
@@ -123,7 +153,12 @@ public class Operation implements Serializable {
                     else {
                         System.out.println("You have " + Project.conter + " tasks");}
 
-                    taskList.showListTitle();
+                    Task y;
+                    for(int i = 0; i < tasks.size(); i++)
+                    {
+                        y = tasks.get(i);
+                        System.out.println("Task " + (tasks.indexOf(y)+1) +": "+ y.toString());
+                    }
 
                     switch (scanner.nextInt()) {
 
@@ -157,7 +192,6 @@ public class Operation implements Serializable {
                                 System.out.println("Choose a correct task number");
                             } else {
                                 taskList.removeTask(inde);
-                                taskList.showListTitle();
                                 System.out.println("Thank you, remove successful");
                                 System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
                             }
@@ -192,5 +226,6 @@ public class Operation implements Serializable {
 
 
     }
+
 
 }

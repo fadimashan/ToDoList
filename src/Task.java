@@ -1,7 +1,11 @@
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 public class Task implements Serializable{
+    public static final long serialVersionUID = -5971538861194843412L;
 
     //TODO change or add getter and setter methods
     private String title;
@@ -28,8 +32,7 @@ public class Task implements Serializable{
         this.title = title;
 
     }
-    public String getTitle()
-    {
+    public String getTitle() {
         return this.title;
     }
 
@@ -38,15 +41,23 @@ public class Task implements Serializable{
         return;
     }
 
-    public void setDate(String date) {
+    public void setDate(String date){
         this.date = date;
-        return;
+    }
+    public String getDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate localDate = LocalDate.parse(date, formatter);
+//        SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+       return this.date = (date.format(date));
     }
 
 
     public void setProject(String p) {
         this.project = p;
+    }
 
+    public String getProjectName(){
+        return this.project;
     }
 
     @Override
