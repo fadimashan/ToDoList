@@ -1,16 +1,18 @@
 # toDoL
 
-Program to create tasks and sort it by a project (group of tasks) or by the name of the task or the date.
-(1) The user can choose the first option to get 3 sorting type:
-    1: for sorting by title.
-    2: sorting by the project name.
-    3: for sorting by date.
+This is a program to create, organise and modify tasks. See below for details on the five main functions of the program.
+(1) Press 1 to sort tasks by:
+    1: task name
+    2: project name
+    3: date
 
-(2) The second option for create a new task.
+(2) Press 2 to create a new task.
 
-(3) To edit a task, mark as done or delete it.
+(3) Press 3 to modify tasks:
+    1: edit a task
+    2: mark it as done
+    3: delete task
 
-(4) to save the tasks
+(4) Press 4 to save the task or tasks.
 
-(5) to print out the list of option.
-
+(5) Press 5 to print out the list of options.
