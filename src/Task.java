@@ -1,10 +1,9 @@
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 
-public class Task implements Serializable{
+public class Task implements Serializable {
     public static final long serialVersionUID = -5971538861194843412L;
 
     //TODO change or add getter and setter methods
@@ -12,20 +11,23 @@ public class Task implements Serializable{
     private String desc;
     private String date;
     private String project;
+    private boolean done =false;
+
     //public Project taskList;
 
-    public Task(String title, String desc, String date , String project)
+    public Task(String title, String desc, String date , String project )
     {
         this.title = title;
         this.desc = desc;
         this.date = date;
         this.project = project;
+
     }
 
-    public Task(){}
-
-    public static void createTask(String title, String Desc, String Date /*, Project taskList*/) {
-    }
+//    public Task(){}
+//
+//    public static void createTask(String title, String Desc, String Date /*, Project taskList*/) {
+//    }
 
 
     public void setTitle(String title) {

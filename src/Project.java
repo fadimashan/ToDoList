@@ -1,15 +1,12 @@
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
 
 
 public class  Project implements Serializable {
     public static final long serialVersionUID = -5971538861194843412L;
 
     public ArrayList<Task> tasks;
-    public static int conter ;
+    public static int counter;
 
 
     public Project(){
@@ -18,22 +15,22 @@ public class  Project implements Serializable {
 
     public void addTask (Task task){
         tasks.add(task);
-        conter = conter + 1;
+        counter = counter + 1;
     }
 
 
-    public void editTask(int index, String title, String desc, String date)
-    {
-
-        Task taskToEdit = tasks.get(index -1);
-        //System.out.println("title");
-        taskToEdit.setTitle(title);
-       // System.out.println("desc");
-        taskToEdit.setDesc(desc);
-       // System.out.println("date");
-        taskToEdit.setDate(date);
-
-    }
+//    public void editTask(int index, String title, String desc, String date)
+//    {
+//
+//        Task taskToEdit = .get(index -1);
+//        //System.out.println("title");
+//        taskToEdit.setTitle(title);
+//       // System.out.println("desc");
+//        taskToEdit.setDesc(desc);
+//       // System.out.println("date");
+//        taskToEdit.setDate(date);
+//
+//    }
     public void removeTask(int index){
         Task taskToRemove = tasks.remove( index - 1);
 
@@ -47,6 +44,8 @@ public class  Project implements Serializable {
 
         }
     }
+
+
 
     public ArrayList<Task> getTasks()
     {
