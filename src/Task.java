@@ -12,6 +12,7 @@ public class Task implements Serializable {
     private String date;
     private String project;
     private boolean done =false;
+    private String done1 ;
 
     //public Project taskList;
 
@@ -23,12 +24,6 @@ public class Task implements Serializable {
         this.project = project;
 
     }
-
-//    public Task(){}
-//
-//    public static void createTask(String title, String Desc, String Date /*, Project taskList*/) {
-//    }
-
 
     public void setTitle(String title) {
         this.title = title;
@@ -49,23 +44,30 @@ public class Task implements Serializable {
     public String getDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate localDate = LocalDate.parse(date, formatter);
-//        SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
-       return this.date = (date.format(date));
+        return this.date = (date.format(date));
     }
 
-
-    public void setProject(String p) {
-        this.project = p;
+    public String status(){
+        if(this.done = true){
+            this.done1="Done!";
+        }
+        else{this.done1="In progress"; }
+        return done1;
     }
+//    public void setProject(String p) {
+//        this.project = p;
+//    }
 
     public String getProjectName(){
         return this.project;
     }
 
+    public void markAsDone()
+    {this.done=true;}
     @Override
     public String toString()
     {
-        return title + " --- " + "date :" + date  + " ==> " + "project name: " + project + "\n" + "The description is: " + desc + ".\n";
+        return String.format("Title: %-15s |Due date: %-12s Project: %-20s  |Status: %-12s \n%-29s  |*** Description: %s\n",
+                title , date  , project, done1 , "", desc );
     }
-
 }

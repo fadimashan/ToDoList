@@ -1,88 +1,91 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.lang.reflect.Array;
+import java.util.*;
 import java.io.Serializable;
 
 public class Operation implements Serializable {
     public static final long serialVersionUID = -5971538861194843412L;
     Scanner scanner = new Scanner(System.in);
-    //Project taskList = new Project();
     ArrayList<Task> taskList = new ArrayList<>();
     boolean x = false;
-    private int counter;
+    public int counter;
 
-    // to save the task in a file: data.bin
-    public void saveT() {
 
-        try {
 
-            ObjectOutputStream oSave = new ObjectOutputStream(new FileOutputStream("/Users/fadi.m/Desktop/github/toDoL/data.bin"));
-            oSave.writeObject(taskList);
-            oSave.close();
+            // to save the task in a file: data.bin
+            public void saveT() {
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+                try {
 
-    // to read the Array list (tasks)
-    public Project readT() {
+                    ObjectOutputStream oSave = new ObjectOutputStream(new FileOutputStream("/Users/fadi.m/Desktop/github/toDoL/data.bin"));
+                    oSave.writeObject(taskList);
+                    oSave.close();
 
-        Project Reader = new Project();
-        try {
-            ObjectInputStream is = new ObjectInputStream(new FileInputStream("/Users/fadi.m/Desktop/github/toDoL/data.bin"));
-            taskList = (ArrayList<Task>) is.readObject();
-            //System.out.println(taskList.toString());
-            is.close();
-            return Reader;
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+            // to read the Array list (tasks)
+            public List<Task> readT() {
 
-        }
-        return Reader;
-    }
-    public void removeTask(int index){
-        Task taskToRemove = taskList.remove( index );
 
-    }
+                try {
 
-    public void editTask(int index, String title, String desc, String date)
-    {
+                    ObjectInputStream is = new ObjectInputStream(new FileInputStream("/Users/fadi.m/Desktop/github/toDoL/data.bin"));
+                    taskList = (ArrayList<Task>) is.readObject();
+                    //System.out.println(taskList.toString());
+                    is.close();
+                    //return taskList;
 
-        Task taskToEdit = taskList.get(index);
-        //System.out.println("title");
-        taskToEdit.setTitle(title);
-        // System.out.println("desc");
-        taskToEdit.setDesc(desc);
-        // System.out.println("date");
-        taskToEdit.setDate(date);
+                } catch (FileNotFoundException e) {
+                    System.out.println("There is no tasks to view");
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                return taskList;
+            }
 
-    }
-//    public void addTask (Task task){
-//        taskList.add(task);
-//        counter = counter + 1;
-//    }
+            // Method part (remove, edit, show, and choose)
+            public void removeTask(int index){
+               // Task taskToRemove =
+                taskList.remove( index );
+            }
 
-    public void showForEdit()
-    {
-        for (int i=0; i< taskList.size(); i++)
-        {
-            System.out.println("Task " + (i+1) + ":    " + taskList.get(i) );
+            // Task counter
+            public int sizeOfArray(int counter){
+                this.counter = taskList.size();
+                System.out.println(counter);
+                return counter;
+            }
 
-        }
-    }
+            public void editTask(int index, String title, String desc, String date)
+            {
+                Task taskToEdit = taskList.get(index);
+                //System.out.println("title");
+                taskToEdit.setTitle(title);
+                // System.out.println("desc");
+                taskToEdit.setDesc(desc);
+                // System.out.println("date");
+                taskToEdit.setDate(date);
 
-    public void editTask(int id)
-    {
+            }
 
-    }
+            public void showForEdit()
+            {
+                for (int i=0; i< taskList.size(); i++)
+                {
+                    System.out.println("Task " + (i+1) + ":    " + taskList.get(i) );
+
+                }
+            }
+
+
 
     public void chooseO(){
 
@@ -92,10 +95,10 @@ public class Operation implements Serializable {
                 case 1:
                     //here you can choose one of the option in the main class
                     //todo there is a problem with the counter
-                    if(Project.counter < 2){
-                        System.out.println("You have " + Project.counter + " task");}
+                    if(counter < 2){
+                        System.out.printf("You have %d task \n", counter);}
                         else {
-                        System.out.println("You have " + Project.counter + " tasks");}
+                        System.out.printf("You have %d tasks\n", counter);}
                         System.out.println("1: for sorting by title,\n2: sorting by the project name, \n3: for sorting by date");
 
                     showTaskOption();
@@ -128,7 +131,7 @@ public class Operation implements Serializable {
                     //TODO:
                     Task t = new Task(title, desc, date, project);
                     taskList.add(t);
-                    counter = counter + 1;
+                    //this.counter = counter + 1;
                     //===============
                     x = true;
                     System.out.println("Done!");
@@ -141,10 +144,10 @@ public class Operation implements Serializable {
                     System.out.println(">> (1) update");
                     System.out.println(">> (2) mark as done");
                     System.out.println(">> (3) remove");
-                    if(Project.counter < 2){
-                        System.out.println("You have " + Project.counter + " task");}
+                    if(counter < 2){
+                        System.out.println("You have " + counter + " task");}
                     else {
-                        System.out.println("You have " + Project.counter + " tasks");}
+                        System.out.println("You have " + counter + " tasks");}
 
                     Task y;
                     for(int i = 0; i < taskList.size(); i++)
@@ -167,7 +170,7 @@ public class Operation implements Serializable {
 
                 case 5:
                     System.out.println(">> Welcome to ToDoLy ");
-                    System.out.println(">> You have " + Project.counter + " tasks todo and " + " tasks are done!");
+                    System.out.println(">> You have " + counter + " tasks todo and " + " tasks are done!");
                     System.out.println(">> Pick an option:");
                     System.out.println(">> (1) Show Task List in details(by date or taskList)");
                     System.out.println(">> (2) Add New Task");
@@ -184,86 +187,97 @@ public class Operation implements Serializable {
 
 
     }
-    public void showTaskOption(){
-        switch (scanner.nextInt()) {
+            public void showTaskOption(){
+                switch (scanner.nextInt()) {
 
-            case 1:
-                //sort by task's name
-                Task t;
-                for(int i = 0; i < taskList.size(); i++)
-                {
-                    t = taskList.get(i);
-                    System.out.println("Task " + (taskList.indexOf(t)+1) +": "+ t.toString());
+                    case 1:
+                        //sort by task's name
+                        Task t;
+                        for(int i = 0; i < taskList.size(); i++)
+                        {
+                            t = taskList.get(i);
+                            System.out.println("Task " + (taskList.indexOf(t)+1) +": "+ t.toString());
+                        }
+                        System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        x= true;
+                        break;
+
+                    case 2:
+                        //Sort by the project name
+                        System.out.println("Sort by the project name");
+                        System.out.println("enter project title");
+                        String d = scanner.next();
+                        taskList.stream().filter(x->x.getProjectName()
+                                .equals(d)).forEach(x-> {System.out.println(x.toString());
+                        });
+                        System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        x= true;
+                        break;
+                    case 3:
+                        //Sort by the date
+                        System.out.println("Sort by the date");
+                        taskList.stream().sorted(Comparator.comparing(Task::getDate))
+                                .forEach(x-> {System.out.println(x.toString());
+                        });
+                        System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        x= true;
+                        break;
+
                 }
-                System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
-                x= true;
-                break;
+            }
+            public void editTaskOption(){
+                switch (scanner.nextInt()) {
 
-            case 2:
-                //Sort by the project name
-                System.out.println("Sort by the project name");
-                System.out.println("enter project title");
-                String d = scanner.next();
-                taskList.stream().filter(x->x.getProjectName().equals(d)).forEach(x-> {System.out.println(x.toString());
-                });
-                System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
-                x= true;
-                break;
-            case 3:
-                //Sort by the date
-                System.out.println("Sort by the date");
-                taskList.stream().sorted(Comparator.comparing(Task::getDate)).forEach(x-> {System.out.println(x.toString());
-                });
-                System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
-                x= true;
-                break;
+                    case 1:
+                        System.out.println("Please choose the task number to edit");
+                        int index = (scanner.nextInt() -1);
+                        if(index > counter){
+                            System.out.println("Choose a correct task number");
+                        } else {
+                            System.out.println("Please edit your title");
+                            scanner.nextLine();
+                            String newTitle = scanner.nextLine();
+                            System.out.println("Please edit your Desc");
+                            String newDesc = scanner.nextLine();
+                            System.out.println("Please edit your date");
+                            String newDate = scanner.nextLine();
+                            editTask(index, newTitle, newDesc,newDate);
+                            showForEdit();
+                            System.out.println("Thank you, edit successful");
+                            System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
 
-        }
+                            break;}
+                    case 2:
+                        Task t;
+                        for(int i = 0; i < taskList.size(); i++)
+                        {
+                            t = taskList.get(i);
+                            System.out.println("Task " + (taskList.indexOf(t)+1) +": "+ t.toString());
+                        }
 
-    }
-    public void editTaskOption(){
-        switch (scanner.nextInt()) {
+//                        ArrayList <Integer> taskIndex = new ArrayList<>();
+//                        for(int i=0; i<taskList.size(); i++){
+//                            taskIndex.add(taskList.indexOf(i));}
+                        System.out.println("Please choose task number to mark it as Done!");
+//                        int q = scanner.nextInt();
+//                        for()
 
-            case 1:
-                System.out.println("Please choose the task number to edit");
-                int index = (scanner.nextInt() -1);
-                if(index > Project.counter){
-                    System.out.println("Choose a correct task number");
-                } else {
-                    System.out.println("Please edit your title");
-                    scanner.nextLine();
-                    String newTitle = scanner.nextLine();
-                    System.out.println("Please edit your Desc");
-                    String newDesc = scanner.nextLine();
-                    System.out.println("Please edit your date");
-                    String newDate = scanner.nextLine();
-                    editTask(index, newTitle, newDesc,newDate);
-                    showForEdit();
-                    System.out.println("Thank you, edit successful");
-                    System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        String q = scanner.nextLine();
 
-                    break;}
-            case 2:
-                System.out.println("Please choose task number to mark it as Done!");
+                        taskList.stream().filter(x->x).findFirst().get().markAsDone();
 
-
-
-                break;
-            case 3:
-                System.out.println("Please choose the task number to remove");
-                int inde = (scanner.nextInt()-1);
-                if(inde > Project.counter){
-                    System.out.println("Choose a correct task number");
-                } else {
-                    removeTask(inde);
-                    System.out.println("Thank you, remove successful");
-                    System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        break;
+                    case 3:
+                        System.out.println("Please choose the task number to remove");
+                        int inde = (scanner.nextInt()-1);
+                        if(inde > counter){
+                            System.out.println("Choose a correct task number");
+                        } else {
+                            removeTask(inde);
+                            System.out.println("Thank you, remove successful");
+                            System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        }
+                        break;
                 }
-                break;
-        }
-
-
-    }
-
-
+            }
 }
