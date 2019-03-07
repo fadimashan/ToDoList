@@ -11,7 +11,7 @@ public class Task implements Serializable {
     private String desc;
     private String date;
     private String project;
-    private boolean done =false;
+    private boolean done;
     private String done1 ;
 
     //public Project taskList;
@@ -22,7 +22,8 @@ public class Task implements Serializable {
         this.desc = desc;
         this.date = date;
         this.project = project;
-
+        this.done=false;
+        status();
     }
 
     public void setTitle(String title) {
@@ -48,7 +49,7 @@ public class Task implements Serializable {
     }
 
     public String status(){
-        if(this.done = true){
+        if(this.done == true){
             this.done1="Done!";
         }
         else{this.done1="In progress"; }
@@ -63,7 +64,9 @@ public class Task implements Serializable {
     }
 
     public void markAsDone()
-    {this.done=true;}
+    {this.done=true;
+        status();
+    }
     @Override
     public String toString()
     {

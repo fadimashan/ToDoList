@@ -139,7 +139,7 @@ public class Operation implements Serializable {
                     System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
                     break;
 
-                case 3: {
+                case 3:
                     System.out.println("please press: ");
                     System.out.println(">> (1) update");
                     System.out.println(">> (2) mark as done");
@@ -156,9 +156,8 @@ public class Operation implements Serializable {
                         System.out.println("Task " + (taskList.indexOf(y)+1) +": "+ y.toString());
                     }
 
-                   editTaskOption();
 
-                }
+                editTaskOption();
                 break;
 
                 case 4:
@@ -255,18 +254,21 @@ public class Operation implements Serializable {
                             System.out.println("Task " + (taskList.indexOf(t)+1) +": "+ t.toString());
                         }
 
-//                        ArrayList <Integer> taskIndex = new ArrayList<>();
-//                        for(int i=0; i<taskList.size(); i++){
-//                            taskIndex.add(taskList.indexOf(i));}
                         System.out.println("Please choose task number to mark it as Done!");
-//                        int q = scanner.nextInt();
-//                        for()
-
-                        String q = scanner.nextLine();
-
-                        taskList.stream().filter(x->x).findFirst().get().markAsDone();
-
+                        int q = scanner.nextInt();
+                        for(int i =0 ; i < taskList.size();i++)
+                        {
+                            Task task = taskList.get(i);
+                            if(taskList.indexOf(task) == (q-1)){
+                                taskList.stream().filter(x ->x.equals(task)).findFirst().get().markAsDone();
+                            }
+                        }
+                        showForEdit();
+                        System.out.println("Thank you, Mark as done successful");
+                        System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        x=true;
                         break;
+
                     case 3:
                         System.out.println("Please choose the task number to remove");
                         int inde = (scanner.nextInt()-1);
