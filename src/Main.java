@@ -2,11 +2,17 @@ public class Main {
 
     public static void main(String[] args){
 
-        Operation op = new Operation();
-        op.readT();
-        op.sizeOfArray(op.counter);
+        Operation operation = new Operation();
+
+        //Calling the reader (recover the data was saved)
+        operation.readT();
+
+        //Calling the counter method to use it in below
+        operation.sizeOfArray(operation.counter);
+
+        // Interface
         System.out.println(">> Welcome to ToDoLy ");
-        System.out.println(">> You have " + op.counter + " tasks todo and " + " tasks are done!");
+        System.out.println(">> You have " + (operation.counter) + " tasks, " + (Task.inProgressCounter) + " tasks are done!");
         System.out.println(">> Pick an option:");
         System.out.println(">> (1) Show Task List in detail (by date or project)");
         System.out.println(">> (2) Add New Task");
@@ -15,10 +21,7 @@ public class Main {
         System.out.println(">>");
 
         // calling the options to choose what do you want to do!
-        op.chooseO();
-
-
-
+        operation.chooseO();
     }
 
 }
