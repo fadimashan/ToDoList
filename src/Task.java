@@ -1,8 +1,6 @@
 import java.io.Serializable;
 import java.time.LocalDate;
 
-
-
 public class Task implements Serializable {
     public static final long serialVersionUID = -5971538861194843412L;
     private String title;
@@ -11,7 +9,6 @@ public class Task implements Serializable {
     private String project;
     private boolean done;
     private String done1 ;
-    public static int inProgressCounter;
 
     public Task(String title, String desc, LocalDate date , String project )
     {
@@ -22,7 +19,6 @@ public class Task implements Serializable {
         this.done=false;
         status();
     }
-
     public void setTitle(String title) {
         this.title = title;
 
@@ -30,37 +26,43 @@ public class Task implements Serializable {
     public String getTilte(){
         return title;
     }
-
     public void setDesc(String desc) {
         this.desc = desc;
         return;
     }
-
+    public String getDesc(){
+        return desc;
+    }
     public void setDate(LocalDate date){
         this.date = date;
     }
-
     public LocalDate getDate() {
         return date;
-    }
-
-    public String status(){
-        if(this.done == true){
-            this.done1="Done!";
-            inProgressCounter++;
-        }
-        else{this.done1="In progress"; }
-        return done1;
     }
     public void setProjectname(String project){this.project=project;}
     public String getProjectName(){
         return this.project;
     }
 
+    public String status(){
+        if(this.done == true){
+            this.done1="Done!";
+
+        }
+        else{this.done1="In progress"; }
+        return done1;
+    }
+
+    public boolean getDone()
+    {
+        return this.done;
+    }
     public void markAsDone()
     {this.done=true;
        status();
     }
+
+
     @Override
     public String toString()
     {

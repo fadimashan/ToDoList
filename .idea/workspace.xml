@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239dceec-811d-45f6-b12b-a2ed0981d991" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Verification.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDoL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/toDoL.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,33 +32,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="165">
+              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Operation.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OperationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1756">
-              <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+            <state relative-caret-position="340">
+              <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1764#1765#0" expanded="true" />
-                <element signature="e#1802#1803#0" expanded="true" />
-                <element signature="method#editTask#0;class#Operation#0" />
-                <element signature="method#chooseO#0;class#Operation#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class diagram.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#saveT#0;class#Operation#0" />
+                <element signature="method#editTask#0;class#Operation#0" />
+                <element signature="method#showForEdit#0;class#Operation#0" />
+                <element signature="method#taskOrTasks#0;class#Operation#0" />
+                <element signature="method#chooseTask#0;class#Operation#0" />
+                <element signature="method#chooseO#0;class#Operation#0" />
+                <element signature="method#sortTaskOption#0;class#Operation#0" />
+                <element signature="method#editTaskOption#0;class#Operation#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -69,23 +87,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Verification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-123">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Task.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#Task#0;class#Task#0" />
               </folding>
             </state>
           </provider>
@@ -94,8 +99,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TaskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="21" column="27" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,7 +126,10 @@
       <find>taskList</find>
       <find>if</find>
       <find>nextLine</find>
+      <find>sizeOfArray</find>
+      <find>doneCounter</find>
       <find>counter</find>
+      <find>taskList.size</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,19 +149,21 @@
         <option value="$PROJECT_DIR$/src/Tasting/TaskTest.java" />
         <option value="$PROJECT_DIR$/Tasting/VerificationTest.java" />
         <option value="$PROJECT_DIR$/src/Tasting/VerificationTest.java" />
-        <option value="$PROJECT_DIR$/src/TaskTest.java" />
         <option value="$PROJECT_DIR$/data" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Verification.java" />
-        <option value="$PROJECT_DIR$/src/Task.java" />
         <option value="$PROJECT_DIR$/src/VerificationTest.java" />
+        <option value="$PROJECT_DIR$/src/TaskTest.java" />
         <option value="$PROJECT_DIR$/src/Operation.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Task.java" />
+        <option value="$PROJECT_DIR$/src/OperationTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+    <option name="x" value="726" />
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -158,8 +171,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +191,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,7 +200,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552561631178" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552597016384" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -223,7 +236,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.OperationTest.doneTaskList">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="toDoL" />
@@ -231,40 +244,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskTest.testSetTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OperationTest.doneTaskList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toDoL" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TaskTest" />
-      <option name="METHOD_NAME" value="testSetTitle" />
+      <option name="MAIN_CLASS_NAME" value="OperationTest" />
+      <option name="METHOD_NAME" value="doneTaskList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskTest.testStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OperationTest.sizeOfArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toDoL" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TaskTest" />
-      <option name="METHOD_NAME" value="testStatus" />
+      <option name="MAIN_CLASS_NAME" value="OperationTest" />
+      <option name="METHOD_NAME" value="sizeOfArray" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VerificationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTest.testSetGetDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toDoL" />
-      <option name="PACKAGE_NAME" value="Tasting" />
-      <option name="MAIN_CLASS_NAME" value="Tasting.VerificationTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TaskTest" />
+      <option name="METHOD_NAME" value="testSetGetDate" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VerificationTest.testSizeOfArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTest.testSetGetProjectName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="toDoL" />
-      <option name="PACKAGE_NAME" value="Tasting" />
-      <option name="MAIN_CLASS_NAME" value="Tasting.VerificationTest" />
-      <option name="METHOD_NAME" value="testSizeOfArray" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TaskTest" />
+      <option name="METHOD_NAME" value="testSetGetProjectName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -272,11 +286,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OperationTest.doneTaskList" />
+        <item itemvalue="JUnit.OperationTest.sizeOfArray" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TaskTest.testSetTitle" />
-        <item itemvalue="JUnit.TaskTest.testStatus" />
-        <item itemvalue="JUnit.VerificationTest" />
-        <item itemvalue="JUnit.VerificationTest.testSizeOfArray" />
+        <item itemvalue="JUnit.TaskTest.testSetGetProjectName" />
+        <item itemvalue="JUnit.TaskTest.testSetGetDate" />
       </list>
     </recent_temporary>
   </component>
@@ -333,39 +347,46 @@
       <option name="project" value="LOCAL" />
       <updated>1551976470790</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Close the &quot;Finish the sorting&quot; milestone with 4 issues.">
+      <created>1552561723772</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1552561723773</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VerificationTest_testSizeOfArray - 2019.03.13 at 11h 55m 56s.xml">
-      <configuration name="VerificationTest.testSizeOfArray" configurationId="JUnit" />
+    <history-entry file="OperationTest_sizeOfArray - 2019.03.14 at 17h 12m 36s.xml">
+      <configuration name="OperationTest.sizeOfArray" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VerificationTest_testSizeOfArray - 2019.03.13 at 11h 57m 42s.xml">
-      <configuration name="VerificationTest.testSizeOfArray" configurationId="JUnit" />
+    <history-entry file="OperationTest_sizeOfArray - 2019.03.14 at 17h 14m 40s.xml">
+      <configuration name="OperationTest.sizeOfArray" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testStatus - 2019.03.13 at 13h 49m 45s.xml">
-      <configuration name="TaskTest.testStatus" configurationId="JUnit" />
+    <history-entry file="OperationTest_doneTaskList - 2019.03.14 at 17h 17m 24s.xml">
+      <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testStatus - 2019.03.13 at 13h 50m 28s.xml">
-      <configuration name="TaskTest.testStatus" configurationId="JUnit" />
+    <history-entry file="OperationTest_doneTaskList - 2019.03.14 at 17h 19m 09s.xml">
+      <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testStatus - 2019.03.13 at 13h 56m 37s.xml">
-      <configuration name="TaskTest.testStatus" configurationId="JUnit" />
+    <history-entry file="OperationTest_sizeOfArray - 2019.03.14 at 17h 19m 15s.xml">
+      <configuration name="OperationTest.sizeOfArray" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testStatus - 2019.03.13 at 14h 03m 06s.xml">
-      <configuration name="TaskTest.testStatus" configurationId="JUnit" />
+    <history-entry file="OperationTest_sizeOfArray - 2019.03.14 at 17h 19m 24s.xml">
+      <configuration name="OperationTest.sizeOfArray" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testStatus - 2019.03.13 at 14h 03m 24s.xml">
-      <configuration name="TaskTest.testStatus" configurationId="JUnit" />
+    <history-entry file="OperationTest_sizeOfArray - 2019.03.14 at 17h 20m 01s.xml">
+      <configuration name="OperationTest.sizeOfArray" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testStatus - 2019.03.13 at 14h 04m 04s.xml">
-      <configuration name="TaskTest.testStatus" configurationId="JUnit" />
+    <history-entry file="OperationTest_doneTaskList - 2019.03.14 at 17h 22m 11s.xml">
+      <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testSetTitle - 2019.03.13 at 14h 11m 55s.xml">
-      <configuration name="TaskTest.testSetTitle" configurationId="JUnit" />
+    <history-entry file="OperationTest_doneTaskList - 2019.03.14 at 17h 25m 35s.xml">
+      <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TaskTest_testSetTitle - 2019.03.13 at 14h 42m 26s.xml">
-      <configuration name="TaskTest.testSetTitle" configurationId="JUnit" />
+    <history-entry file="OperationTest_doneTaskList - 2019.03.14 at 17h 27m 26s.xml">
+      <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -379,9 +400,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4948276" visible="true" weight="0.15307583" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4948276" visible="true" weight="0.15522175" />
       <window_info id="Structure" order="1" sideWeight="0.50223213" side_tool="true" weight="0.18955651" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -391,14 +411,14 @@
       <window_info id="Favorites" order="7" sideWeight="0.50517243" side_tool="true" weight="0.1532738" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32771084" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" visible="true" weight="0.34096387" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39518073" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49713877" weight="0.34096387" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31325302" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32863188" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50214595" side_tool="true" weight="0.31084338" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32771084" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5028612" side_tool="true" weight="0.34096387" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4985694" weight="0.32650602" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -416,7 +436,8 @@
     <MESSAGE value="read me is done" />
     <MESSAGE value="I fixed the saving and reading." />
     <MESSAGE value="7/3/2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="7/3/2019" />
+    <MESSAGE value="Close the &quot;Finish the sorting&quot; milestone with 4 issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Close the &quot;Finish the sorting&quot; milestone with 4 issues." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -426,6 +447,14 @@
           <line>23</line>
           <properties />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/OperationTest.java</url>
+          <line>44</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -463,17 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
-          <folding>
-            <element signature="e#10225#10226#0" expanded="true" />
-            <element signature="e#10308#10309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/function/Predicate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -488,66 +506,93 @@
     <entry file="file://$PROJECT_DIR$/Tasting/TaskTest.java" />
     <entry file="file://$PROJECT_DIR$/src/Tasting/VerificationTest.java" />
     <entry file="file://$PROJECT_DIR$/data" />
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/VerificationTest.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="6" selection-end-column="11" />
+        <state relative-caret-position="174">
+          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+          <folding>
+            <element signature="e#10225#10226#0" expanded="true" />
+            <element signature="e#10308#10309#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="165">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Class diagram.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Verification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-123">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="180">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VerificationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/TaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="255">
+          <caret line="21" column="27" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="480">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Task#0;class#Task#0" />
+            <element signature="method#setTitle#0;class#Task#0" />
+            <element signature="method#setDesc#0;class#Task#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1756">
-          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+        <state relative-caret-position="765">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
+            <element signature="method#saveT#0;class#Operation#0" />
             <element signature="method#editTask#0;class#Operation#0" />
+            <element signature="method#showForEdit#0;class#Operation#0" />
+            <element signature="method#taskOrTasks#0;class#Operation#0" />
+            <element signature="method#chooseTask#0;class#Operation#0" />
             <element signature="method#chooseO#0;class#Operation#0" />
+            <element signature="method#sortTaskOption#0;class#Operation#0" />
+            <element signature="method#editTaskOption#0;class#Operation#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OperationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>

@@ -9,11 +9,17 @@ public class Operation implements Serializable {
     public static final long serialVersionUID = -5971538861194843412L;
     Scanner scanner = new Scanner(System.in).useDelimiter("\n");
     private ArrayList<Task> taskList = new ArrayList<>();
+    private ArrayList<Task> doneTaskList = new ArrayList<>();
     boolean x = false;
     Verification verification = new Verification();
     public int counter;
+    public int doneCounter;
 
-    // To save the task in a file: data.bin
+    /**
+     *
+     * To save the tasks in a file "data.bin",
+     *
+     */
     public void saveT() {
         try {
             ObjectOutputStream oSave = new ObjectOutputStream(new FileOutputStream("data.bin"));
@@ -27,14 +33,18 @@ public class Operation implements Serializable {
         }
     }
 
-    // to read the Array list (tasks)
+    /**
+     *
+     * to read the ArrayList (tasks) for the file "data.bin", give exception if there is no task to show
+     *
+     */
     public List<Task> readT() {
         try {
             ObjectInputStream is = new ObjectInputStream(new FileInputStream("data.bin"));
             taskList = (ArrayList<Task>) is.readObject();
             is.close();
         } catch (FileNotFoundException e) {
-            System.out.println("There is no tasks to view");
+            System.out.println("There is no tasks to show");
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -43,10 +53,15 @@ public class Operation implements Serializable {
         return taskList;
     }
 
-    // Task counter
+    //Check the size of the Array list and append it to the counter
     public int sizeOfArray(int counter) {
-        this.counter = taskList.size();
-        return counter;
+       this.counter = taskList.size();
+       return counter;
+    }
+
+    public int doneTaskList(int doneCounter){
+        this.doneCounter= doneTaskList.size();
+        return doneCounter;
     }
 
     /**
@@ -69,7 +84,6 @@ public class Operation implements Serializable {
         taskToEdit.setDesc(desc);
         // System.out.println("date");
         taskToEdit.setDate(date);
-
     }
 
     /**
@@ -79,9 +93,9 @@ public class Operation implements Serializable {
     public void showForEdit() {
         for (int i = 0; i < taskList.size(); i++) {
             System.out.println("Task " + (i + 1) + ":    " + taskList.get(i));
-
         }
     }
+
     /**
      *
      * Print "You have .... task" if the number of task you have less than 2,
@@ -92,6 +106,14 @@ public class Operation implements Serializable {
             System.out.printf("You have %d task \n", counter);
         } else {
             System.out.printf("You have %d tasks\n", counter);
+        }
+    }
+
+    public void chooseTask(){
+        Task t;
+        for (int i = 0; i < taskList.size(); i++) {
+            t = taskList.get(i);
+            System.out.println("Task " + (taskList.indexOf(t) + 1) + ": " + t.toString());
         }
     }
 
@@ -164,7 +186,7 @@ public class Operation implements Serializable {
 
                 case 5:
                     System.out.println(">> Welcome to ToDoLy ");
-                    System.out.println(">> You have " + (counter) + " tasks, " +Task.inProgressCounter+ " tasks are done!");
+                    System.out.println(">> You have " + (counter) + " tasks, " +doneCounter+ " tasks are done!");
                     System.out.println(">> Pick an option:");
                     System.out.println(">> (1) Show Task List in details(by date or taskList)");
                     System.out.println(">> (2) Add New Task");
@@ -182,7 +204,6 @@ public class Operation implements Serializable {
         } while (x);
     }
 
-
     /**
      * Check if the use enter a number out of range (as we have just three options)
      * Choose option to sort the tasks you have, by: task name, project name or date.
@@ -197,11 +218,8 @@ public class Operation implements Serializable {
 
             case 1:
                 //Sort by task's name
-                Task t;
-                for (int i = 0; i < taskList.size(); i++) {
-                    t = taskList.get(i);
-                    System.out.println("Task " + (taskList.indexOf(t) + 1) + ": " + t.toString());
-                }
+                //TaskList.indexOf(t) + 1 because I want to avoid starting the task number from "0"
+                chooseTask();
                 System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
                 x = true;
                 break;
@@ -215,18 +233,17 @@ public class Operation implements Serializable {
                 //Sort by the project name
                 System.out.println("Sort by the project name");
                 System.out.println("enter project name");
-
                 String d = scanner.next();
                 ArrayList<Task> sortByProject = (ArrayList<Task>) taskList.stream().filter(x -> x.getProjectName()
                         .equals(d)).collect(Collectors.toList());
-                if (sortByProject.size() > 0) {
-                    System.out.println(sortByProject.toString());
-                    System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
-                    break;
-                } else {
-                    System.out.println("Project not founded!");
-                    x = true;
-                }
+                    if (sortByProject.size() > 0) {
+                        System.out.println(sortByProject.toString());
+                        System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
+                        break;
+                    } else {
+                        System.out.println("Project not founded!");
+                        x = true;
+                    }
 
             break;
 
@@ -243,11 +260,14 @@ public class Operation implements Serializable {
                 System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
                 x = true;
                 break;
-
         }
         chooseO();
     }
 
+     /**
+     * Check if the use enter a number out of range (as we have just three options)
+     * Choose option to modify your tasks (1:edit, 2:mark as done, 3:remove task)
+     */
     public void editTaskOption() {
         verification.justNum();
         if (verification.num < 0 || verification.num > 3) {
@@ -255,13 +275,13 @@ public class Operation implements Serializable {
             editTaskOption();
         }
         switch (verification.num) {
-
             case 1:
                 do {
                     System.out.println("Please choose the task number to edit");
                     verification.justNum();}
 
                     while ((verification.num - 1) > counter || (verification.num - 1) <= 0) ;
+                    // index = num-1 because I add "1" to the sorting number of tasks I have to avoid starting the task number from "0"
                     int index = (verification.num -1);
 
                     System.out.println("Please edit your title");
@@ -278,19 +298,35 @@ public class Operation implements Serializable {
                     break;
 
             case 2:
-                    Task t;
-                    for (int i = 0; i < taskList.size(); i++) {
-                        t = taskList.get(i);
-                        System.out.println("Task " + (taskList.indexOf(t) + 1) + ": " + t.toString());
-                    }
+
+                    /**
+                     * Choose the task number to make it Done! and add 1 to the (done task counter), then add the task to the (ArrayList of done tasks).
+                     * Check if the task is already (done) so don't add the task to the (ArrayList of done tasks) and don't add 1 to the counter.
+                     */
+                    chooseTask();
                     System.out.println("Please choose task number to mark it as Done!");
                     verification.justNum();
                     for (int i = 0; i < taskList.size(); i++) {
                         Task task = taskList.get(i);
                         if (taskList.indexOf(task) == (verification.num - 1)) {
                             taskList.stream().filter(x -> x.equals(task)).findFirst().get().markAsDone();
+
+                            if (doneTaskList.size() == 0){
+                                doneTaskList.add(task);
+                                doneCounter = doneTaskList(doneCounter);}
+                            else {
+                                for (int j = 0; j < doneTaskList.size(); j++) {
+                                    if (task == doneTaskList.get(j))
+                                        break;
+                                    else {
+                                        doneTaskList.add(task);
+                                        doneCounter= doneTaskList(doneCounter);
+                                    }
+                                }
+                            }
                         }
                     }
+
                     showForEdit();
                     System.out.println("Thank you, Mark as done successful");
                     System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
@@ -298,18 +334,19 @@ public class Operation implements Serializable {
                     break;
 
             case 3:
+                    // Remove the task by index
                     System.out.println("Please choose the task number to remove");
                     verification.justNum();
-                    int inde = (verification.num - 1);
-                    if (inde > counter) {
+                    int TaskNumber = (verification.num - 1);
+                    if (TaskNumber > counter) {
                         System.out.println("Choose a correct task number");
                     } else {
-                        removeTask(inde);
+                        removeTask(TaskNumber);
                         System.out.println("Thank you, remove successful");
                         System.out.println("Choose other option (press 5 to see the options again) or press 4 to save and exit! ");
                     }
                     break;
-                }
         }
     }
+}
 
