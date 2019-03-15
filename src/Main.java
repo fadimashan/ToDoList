@@ -9,10 +9,10 @@ public class Main {
 
         //Calling the counter method to use it in below
         operation.sizeOfArray(operation.counter);
-        operation.doneTaskList(operation.doneCounter);
+        operation.doneTaskList();
         // Interface
         System.out.println(">> Welcome to ToDoLy ");
-        System.out.println(">> You have " + (operation.counter) + " tasks, " + (operation.doneCounter) + " tasks are done!");
+        System.out.println(">> You have " + (operation.counter - operation.doneCounter) + " tasks to do, " + (operation.doneCounter) + " tasks are done!");
         System.out.println(">> Pick an option:");
         System.out.println(">> (1) Show Task List in detail (by date or project)");
         System.out.println(">> (2) Add New Task");

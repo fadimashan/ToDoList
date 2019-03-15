@@ -11,16 +11,18 @@
  
  
 **Sort tasks by:**
-    1. task name
-    2. project name
-    3. date
+
+    1. Task name
+    2. Project name
+    3. Date
 
 **Create a new tasks.**
 
 **Modify tasks:**
-    1. edit a task
-    2. mark it as done
-    3. delete task
+
+    1. Edit a task
+    2. Mark it as done
+    3. Delete task
 
 **Save your tasks.**
 

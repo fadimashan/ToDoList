@@ -59,9 +59,9 @@ public class Operation implements Serializable {
        return counter;
     }
 
-    public int doneTaskList(int doneCounter){
-        this.doneCounter= doneTaskList.size();
-        return doneCounter;
+    public int doneTaskList(){
+        return doneTaskList.size();
+
     }
 
     /**
@@ -186,7 +186,7 @@ public class Operation implements Serializable {
 
                 case 5:
                     System.out.println(">> Welcome to ToDoLy ");
-                    System.out.println(">> You have " + (counter) + " tasks, " +doneCounter+ " tasks are done!");
+                    System.out.println(">> You have " + (counter - doneCounter) + " tasks, " +doneCounter+ " tasks are done!");
                     System.out.println(">> Pick an option:");
                     System.out.println(">> (1) Show Task List in details(by date or taskList)");
                     System.out.println(">> (2) Add New Task");
@@ -200,7 +200,6 @@ public class Operation implements Serializable {
                     x = true;
                     break;
             }
-            //todo fix X
         } while (x);
     }
 
@@ -313,14 +312,14 @@ public class Operation implements Serializable {
 
                             if (doneTaskList.size() == 0){
                                 doneTaskList.add(task);
-                                doneCounter = doneTaskList(doneCounter);}
+                                doneCounter = doneTaskList();}
                             else {
                                 for (int j = 0; j < doneTaskList.size(); j++) {
                                     if (task == doneTaskList.get(j))
                                         break;
                                     else {
                                         doneTaskList.add(task);
-                                        doneCounter= doneTaskList(doneCounter);
+                                        doneCounter= doneTaskList();
                                     }
                                 }
                             }

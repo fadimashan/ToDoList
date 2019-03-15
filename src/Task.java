@@ -21,7 +21,6 @@ public class Task implements Serializable {
     }
     public void setTitle(String title) {
         this.title = title;
-
     }
     public String getTilte(){
         return title;
@@ -44,6 +43,9 @@ public class Task implements Serializable {
         return this.project;
     }
 
+    /**
+     *@return "Done!" if the status of the task is true, and "In progress" if false.
+     * **/
     public String status(){
         if(this.done == true){
             this.done1="Done!";
@@ -53,16 +55,23 @@ public class Task implements Serializable {
         return done1;
     }
 
+    /**
+     *This method assign the task as done. Then calling the status method.
+     * **/
+    public void markAsDone()
+    {this.done=true;
+        status();
+    }
+
     public boolean getDone()
     {
         return this.done;
     }
-    public void markAsDone()
-    {this.done=true;
-       status();
-    }
 
 
+    /**
+     * Overriding toString method to a new format to suit my task view
+     * **/
     @Override
     public String toString()
     {
