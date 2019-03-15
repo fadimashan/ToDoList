@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="239dceec-811d-45f6-b12b-a2ed0981d991" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_easytesting_fest_assert_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fest-assert-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fest-util-1.1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/META-INF/toDoL.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/Operation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/OperationTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/Task.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/TaskTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/ToDoL diagram.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/toDoL/Verification.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OperationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ToDoL diagram.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Class diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TaskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-419">
-              <caret line="21" column="27" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="20" />
+            <state relative-caret-position="45">
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OperationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-314">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            <state relative-caret-position="384">
+              <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,16 +166,17 @@
         <option value="$PROJECT_DIR$/data" />
         <option value="$PROJECT_DIR$/src/Verification.java" />
         <option value="$PROJECT_DIR$/src/VerificationTest.java" />
-        <option value="$PROJECT_DIR$/src/TaskTest.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Task.java" />
         <option value="$PROJECT_DIR$/src/Operation.java" />
         <option value="$PROJECT_DIR$/src/OperationTest.java" />
+        <option value="$PROJECT_DIR$/src/TaskTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="801" />
@@ -201,7 +215,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552646881640" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552647487764" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -376,13 +390,17 @@
       <option name="project" value="LOCAL" />
       <updated>1552598311709</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Close the &quot;Organise the code&quot; milestone with 1 issues.&#10;create a new diagram. &#10;Finish the code!">
+      <created>1552647106426</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1552647106426</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OperationTest_doneTaskList - 2019.03.14 at 22h 31m 03s.xml">
-      <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="OperationTest_doneTaskList - 2019.03.14 at 22h 36m 28s.xml">
       <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
     </history-entry>
@@ -410,6 +428,9 @@
     <history-entry file="OperationTest_doneTaskList - 2019.03.15 at 11h 31m 52s.xml">
       <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="OperationTest_doneTaskList - 2019.03.15 at 11h 46m 04s.xml">
+      <configuration name="OperationTest.doneTaskList" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,11 +442,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="801" extended-state="0" />
+    <frame x="1" y="23" width="1440" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="simpleUML" weight="0.3297568" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4948276" visible="true" weight="0.16380544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4948276" visible="true" weight="0.16380544" />
       <window_info id="Structure" order="1" sideWeight="0.50223213" side_tool="true" weight="0.18955651" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -435,12 +456,12 @@
       <window_info id="Favorites" order="7" sideWeight="0.50517243" side_tool="true" weight="0.1532738" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32713756" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49570817" visible="true" weight="0.33965015" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49570817" weight="0.33965015" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31195337" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32771084" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3265306" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50429183" side_tool="true" weight="0.34076828" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4985694" weight="0.32589838" />
@@ -463,7 +484,8 @@
     <MESSAGE value="I fixed the saving and reading." />
     <MESSAGE value="7/3/2019" />
     <MESSAGE value="Close the &quot;Finish the sorting&quot; milestone with 4 issues." />
-    <option name="LAST_COMMIT_MESSAGE" value="Close the &quot;Finish the sorting&quot; milestone with 4 issues." />
+    <MESSAGE value="Close the &quot;Organise the code&quot; milestone with 1 issues.&#10;create a new diagram. &#10;Finish the code!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Close the &quot;Organise the code&quot; milestone with 1 issues.&#10;create a new diagram. &#10;Finish the code!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -692,8 +714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-419">
-          <caret line="21" column="27" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="20" />
+        <state relative-caret-position="45">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -702,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OperationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-314">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        <state relative-caret-position="384">
+          <caret line="40" column="31" lean-forward="true" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
