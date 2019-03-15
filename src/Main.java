@@ -10,7 +10,8 @@ public class Main {
         //Calling the counter method to use it in below
         operation.sizeOfArray(operation.counter);
         operation.doneTaskList();
-        // Interface
+
+        //Interface
         System.out.println(">> Welcome to ToDoLy ");
         System.out.println(">> You have " + (operation.counter - operation.doneCounter) + " tasks to do, " + (operation.doneCounter) + " tasks are done!");
         System.out.println(">> Pick an option:");
@@ -20,7 +21,7 @@ public class Main {
         System.out.println(">> (4) Save and Quit");
         System.out.println(">>");
 
-        // calling the options to choose what do you want to do!
+        //Calling the options to choose what do you want to do!
         operation.chooseO();
     }
 
